@@ -1,0 +1,210 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.high-light-sec {
+  color: #e64681;
+}
+
+.high-light-pri {
+  color: #af1a07;
+}
+
+.btn {
+  display: inline-block;
+  color: #000;
+  background: #f1f1f1;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #fff;
+}
+
+.btn-primary {
+  background: #e64681;
+}
+
+.btn-primary:hover {
+  background: #d62f6c;
+}
+
+.btn-secondary {
+  background: #af1a07;
+}
+
+.btn-secondary:hover {
+  background: #9e1706;
+}
+
+body {
+  overflow: hidden;
+  color: #fff;
+  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 100%;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+section {
+  height: 100vh;
+}
+
+#showcase, #the-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#showcase .btn {
+  display: none;
+}
+#showcase img, #showcase h1, #showcase h2, #showcase btn {
+  opacity: 0;
+}
+
+#who, #death, #birth-career {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+#who .btn, #death .btn, #birth-career .btn {
+  display: none;
+}
+#who h2, #who p, #who .btn, #who img, #death h2, #death p, #death .btn, #death img, #birth-career h2, #birth-career p, #birth-career .btn, #birth-career img {
+  opacity: 0;
+}
+#who .img-container, #death .img-container, #birth-career .img-container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 0.5rem;
+}
+
+#who, #death, #birth-career, #the-end {
+  background: #fff;
+}
+
+#the-end {
+  padding: 0.5rem;
+}
+#the-end h2, #the-end h3, #the-end p, #the-end .btn, #the-end .social {
+  opacity: 0;
+}
+#the-end #socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: wrap;
+}
+#the-end #socials .btn {
+  display: none;
+}
+#the-end #socials .social {
+  font-size: 2rem;
+  margin: 1rem;
+  color: #e64681;
+  display: none;
+}
+#the-end #socials .social:hover {
+  color: #d62f6c;
+}
+
+@media screen and (min-width: 360px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  img {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #showcase img {
+    max-width: 60%;
+  }
+
+  #who, #death, #birth-career {
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

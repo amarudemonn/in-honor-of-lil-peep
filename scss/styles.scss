@@ -1,0 +1,226 @@
+$primary-color: #af1a07;
+$secondary-color: #e64681;
+$font-stack: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.high-light-sec {
+  color: $secondary-color;
+}
+
+.high-light-pri {
+  color: $primary-color;
+}
+
+.btn {
+  display: inline-block;
+  color: #000;
+  background: #f1f1f1;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #fff;
+}
+
+.btn-primary {
+  background: $secondary-color;
+}
+
+.btn-primary:hover {
+  background: #d62f6c;
+}
+
+.btn-secondary {
+  background: $primary-color;
+}
+
+.btn-secondary:hover {
+  background: #9e1706;
+}
+
+body {
+  overflow: hidden;
+  color: #fff;
+  font-family: $font-stack;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 100%;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+section {
+  height: 100vh;
+}
+
+#showcase, #the-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#showcase {
+  .btn {
+    display: none;
+  }
+
+  img, h1, h2, btn {
+    opacity: 0;
+  }
+}
+
+#who, #death, #birth-career {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  .btn {
+    display: none;
+  }
+
+  h2, p, .btn, img {
+    opacity: 0;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 0.5rem;
+  }
+}
+
+#who, #death, #birth-career, #the-end {
+  background: #fff;
+}
+
+#the-end {
+  h2, h3, p, .btn, .social {
+    opacity: 0;
+  }
+
+  padding: 0.5rem;
+  #socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: wrap;
+
+    .btn {
+      display: none;
+    }
+
+    .social {
+      font-size: 2rem;
+      margin: 1rem;
+      color: $secondary-color;
+      display: none;
+    }
+
+    .social:hover {
+      color: #d62f6c;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #showcase {
+    img {
+      max-width: 60%;
+    }
+  }
+
+  #who, #death, #birth-career {
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
